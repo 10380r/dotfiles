@@ -1,0 +1,9 @@
+cat << 'EOS' >> ~/.zsh_profile
+
+EOS
+source ~/.zsh_profile
+# pyenvさんに~/.pyenvではなく、/usr/loca/var/pyenvを使うようにお願いする
+export PYENV_ROOT=/usr/local/var/pyenv
+export PATH="$HOME/.pyenv/shims:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init -)"
