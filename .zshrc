@@ -48,6 +48,7 @@ setopt no_beep
 # Ctrl+Dでzshを終了しない
 setopt ignore_eof
 # Jupyterのエイリアス
-alias ju='/anaconda3/bin/jupyter_mac.command ; exit;'
+alias ju='jupyter notebook'
 
+#pyenvよりデフォのPythonが優先されてしまうので、それを回避
 eval "$(pyenv init -)"
