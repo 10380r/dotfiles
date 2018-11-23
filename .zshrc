@@ -14,11 +14,52 @@ colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
-## prompt
-# PROMPT="%~ %# "
-# 2行表示
-PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~
+## PROMPT--------------------------------------------
+PROMPT="%{${fg[green]}%}%n@%{${reset_color}%}
 %# "
+## RPROMPT
+LPROMPT=$'`branch-status-check` %~' # %~はpwd
+setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
+# @see https://wiki.archlinux.org/index.php/zsh
+function branch-status-check {
+    local prefix branchname suffix
+        # .gitの中だから除外
+        if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
+            return
+        fi
+        branchname=`get-branch-name`
+        # ブランチ名が無いので除外
+        if [[ -z $branchname ]]; then
+            return
+        fi
+        prefix=`get-branch-status` #色だけ返ってくる
+        suffix='%{'${reset_color}'%}'
+        echo ${prefix}${branchname}${suffix}
+}
+function get-branch-name {
+    # gitディレクトリじゃない場合のエラーは捨てます
+    echo `git rev-parse --abbrev-ref HEAD 2> /dev/null`
+}
+function get-branch-status {
+    local res color
+        output=`git status --short 2> /dev/null`
+        if [ -z "$output" ]; then
+            res=':' # status Clean
+            color='%{'${fg[green]}'%}'
+        elif [[ $output =~ "[\n]?\?\? " ]]; then
+            res='?:' # Untracked
+            color='%{'${fg[yellow]}'%}'
+        elif [[ $output =~ "[\n]? M " ]]; then
+            res='M:' # Modified
+            color='%{'${fg[red]}'%}'
+        else
+            res='A:' # Added to commit
+            color='%{'${fg[cyan]}'%}'
+        fi
+        # echo ${color}${res}'%{'${reset_color}'%}'
+        echo ${color} # 色だけ返す
+}
+# end of PROMPT--------------------------------------
 # 環境変数
 export LANG=ja_JP.UTF-8
 # 補完を有効にする
@@ -47,8 +88,10 @@ setopt print_eight_bit
 setopt no_beep
 # Ctrl+Dでzshを終了しない
 setopt ignore_eof
-# Jupyterのエイリアス
-alias ju='jupyter notebook'
 
+# 各エイリアス
+alias ju="jupyter notebook"
+alias line="open /Applications/LINE.app"
+alias slack="open /Applications/Slack.app"
 #pyenvよりデフォのPythonが優先されてしまうので、それを回避
 eval "$(pyenv init -)"
