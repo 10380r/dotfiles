@@ -15,8 +15,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'tommcdo/vim-exchange'
 " Vimからgitを操作する
 Plugin 'tpope/vim-fugitive'
+" インデントに色を付けて見やすくする
+Plugin 'Yggdroot/indentLine'
+" ファイルをtree表示してくれる
+Plugin 'scrooloose/nerdtree'
+" コメントON/OFFを手軽に実行
+Plugin 'tomtom/tcomment_vim'
 " color scheme
-"https://github.com/cocopon/iceberg.vim/
 Plugin 'cocopon/iceberg.vim'
 " " よく使うコマンドをより素早く行うためのコマンドを多数持つプラグイン
 " Plugin 'tpope/vim-surround'
@@ -24,9 +29,9 @@ call vundle#end()          " required by Vundle
 filetype plugin indent on  " required by Vundle
 " end of Vundle settings--------------------------------------------------
 " 全角スペースの背景を白に変更
-highlight FullWidthSpace ctermbg=white
-match FullWidthSpace /　/
-"colorscheme
+autocmd Syntax,ColorScheme * highlight FullwidthSpace ctermbg=red guibg=white
+autocmd Syntax,ColorScheme * syn match FullwidthSpace containedin=ALL /　/
+
 colorscheme iceberg
 set title
 set swapfile

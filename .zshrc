@@ -15,7 +15,7 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
 ## PROMPT--------------------------------------------
-PROMPT="%{${fg[green]}%}%n@%{${reset_color}%}
+PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~
 %# "
 ## RPROMPT
 LPROMPT=$'`branch-status-check` %~' # %~はpwd
