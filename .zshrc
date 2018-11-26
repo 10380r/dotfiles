@@ -90,6 +90,8 @@ setopt no_beep
 setopt ignore_eof
 
 # 各エイリアス
+alias grep='grep -G'
+alias ls='ls -G'
 alias ju="jupyter notebook"
 alias line="open /Applications/LINE.app"
 alias slack="open /Applications/Slack.app"
