@@ -1,13 +1,12 @@
-## homebrewを使えるように環境変数を追加
+# homebrewを使えるように環境変数を追加
 #https://qiita.com/yotsak83/items/c37e91542d2c4518c65b
-export PATH=$HOME/my_local/homebrew/bin:$PATH
-export HOMEBREW_CACHE=$HOME/my_local/homebrew/cache
+#export PATH=$HOME/my_local/homebrew/bin:$PATH
+#export HOMEBREW_CACHE=$HOME/my_local/homebrew/cache
 
-## 参考にしたよ
-## https://gist.github.com/mollifier/4979906
-## http://mkit2009.hatenablog.com/entry/2013/01/28/001213
-## https://original-game.com/terminal-zsh2/
-#--------------------------------------------------------------------
+# 参考にしたよ
+# https://gist.github.com/mollifier/4979906
+# http://mkit2009.hatenablog.com/entry/2013/01/28/001213
+# https://original-game.com/terminal-zsh2/
 # 色を使用出来るようにする
 autoload -U colors
 colors
@@ -15,17 +14,16 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
 ## PROMPT--------------------------------------------
-#RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
+#RPROMPT="${vcs_info_msg_0_}${reset_color}"
+PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~ ${vcs_info_msg_0_}${reset_color}
+%# "
 autoload -Uz vcs_info
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:git*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-RPROMPT="${vcs_info_msg_0_}${reset_color}"
-PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~
-%# "
 setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
 # end of PROMPT--------------------------------------
 # 環境変数
@@ -36,8 +34,6 @@ compinit -u
 zstyle ':completion:*' menu select
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-alias ls="ls -GF"
-alias gls="gls --color"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 #直前のコマンドと同じなら、履歴に残さない
 setopt HIST_IGNORE_DUPS
@@ -58,8 +54,9 @@ setopt no_beep
 setopt ignore_eof
 
 # 各エイリアス
-alias grep='grep -G'
-alias ls='ls -G'
+alias gls="gls --color"
+alias grep="grep -G"
+alias ls="ls -G"
 alias ju="jupyter notebook"
 alias line="open /Applications/LINE.app"
 alias slack="open /Applications/Slack.app"
