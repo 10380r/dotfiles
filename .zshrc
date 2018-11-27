@@ -14,8 +14,7 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
 ## PROMPT--------------------------------------------
-#RPROMPT="${vcs_info_msg_0_}${reset_color}"
-PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~ ${vcs_info_msg_0_}${reset_color}
+PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~ %{${vcs_info_msg_0_}%}%{${reset_color}%  
 %# "
 autoload -Uz vcs_info
 zstyle ':vcs_info:git:*' check-for-changes true
@@ -37,7 +36,6 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 #直前のコマンドと同じなら、履歴に残さない
 setopt HIST_IGNORE_DUPS
-# 同じコマンドをヒストリに残さない
 # ヒストリの設定
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -61,6 +59,6 @@ alias ju="jupyter notebook"
 alias line="open /Applications/LINE.app"
 alias slack="open /Applications/Slack.app"
 alias v="vim"
-alias vi="vim"
+alias vi="vim" # vi使いづらい
 #pyenvよりデフォのPythonが優先されてしまうので、それを回避
 eval "$(pyenv init -)"
