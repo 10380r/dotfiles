@@ -1,7 +1,7 @@
 # homebrewを使えるように環境変数を追加
 #https://qiita.com/yotsak83/items/c37e91542d2c4518c65b
-#export PATH=$HOME/my_local/homebrew/bin:$PATH
-#export HOMEBREW_CACHE=$HOME/my_local/homebrew/cache
+export PATH=$HOME/my_local/homebrew/bin:$PATH
+export HOMEBREW_CACHE=$HOME/my_local/homebrew/cache
 
 # 参考にしたよ
 # https://gist.github.com/mollifier/4979906
