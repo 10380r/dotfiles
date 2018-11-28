@@ -66,7 +66,7 @@ alias vi="vim" # vi使いづらい
 eval "$(pyenv init -)"
 
 # ターミナルからググる-------------------------------
-google(){
+g(){
     if [ $(echo $1 | egrep "^-[cfs]$") ]; then
         local opt="$1"
         shift
