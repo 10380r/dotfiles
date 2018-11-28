@@ -1,0 +1,35 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome()
+
+#URL
+driver.get('http://www.yahoo.co.jp/')
+elem  = driver.find_element_by_name("p")
+elem.send_keys('Instagram')
+elem.send_keys(Keys.RETURN)
+
+time.sleep(2)
+
+driver.find_element_by_link_text('Instagram').click()
+
+driver.implicitly_wait(2)
+driver.find_element_by_link_text("ログインする").click()
+
+loginPath = '//*[@id="react-root"]/section/main/article/div[2]/div[2]/p/a'
+usernamePath = '//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[1]/div/input'
+passwordPath = '//*[@id="react-root"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/input'
+
+username = '10380r'
+password = 'r19971104'
+
+usernameField = driver.find_element_by_xpath(usernamePath)
+usernameField.send_keys(username)
+
+passwordField = driver.find_element_by_xpath(passwordPath)
+passwordField.send_keys(password)
+passwordField.send_keys(Keys.RETURN)
+
+time.sleep(5)
+

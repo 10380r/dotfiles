@@ -1,0 +1,17 @@
+import tweepy
+import json
+CONSUMER_KEY = 'ZuU1hU9aDiAo1QjWQnQRigvvT'
+CONSUMER_SECRET = 'lrLiFH0Noo8sOBaRnMCIm952ZQ0BRSZEctQWpZBacKhhDQ3yWQ'
+ACCESS_TOKEN = '796211582837501953-29g90KxysZtZbGgaekSSitLZ7nagtdd'
+ACCESS_TOKEN_SECRET = 'skTjfR6d07mWQU1O4iK3k4BfeRWvkyuPfxNqT5z2i9Biq'
+twitter_auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+twitter_auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+
+api = tweepy.API(twitter_auth)
+
+usertimeline = api.user_timeline('namida_mylife')
+
+#for i in range(len(usertimeline)):
+#    print(usertimeline[i])
+
+print(usertimeline[0]._json)

@@ -1,0 +1,39 @@
+import urllib.request
+from bs4 import BeautifulSoup
+import MeCab
+from collections import Counter
+
+url = input('url: ')
+soup = BeautifulSoup(urllib.request.urlopen(url), 'html.parser')
+
+try:
+    p = soup.findall('p')
+except:
+    pass
+try:
+    span = soup.findall('span')
+except:
+   pass 
+
+try:
+    #text = ''
+    for i in p:
+        text += i.text
+
+    words_li = []
+    m = MeCab.Tagger()
+    keywords = m.parse(text)
+
+    for row in keywords.split('\n'):
+        word = row.split('\t')[0] 
+        if word == 'EOS':
+            break
+        else:
+            pos = row.split('\t')[1].split(',')[0]
+            if pos == '名詞' or pos == '形容詞':
+                words_li.append(word)
+
+    for i in Counter(words_li).most_common():
+        print(i)
+except:
+    print('すまん。このサイトの構造上解析できん。')

@@ -1,0 +1,24 @@
+#-*- coding: utf-8 -*-
+import pandas as pd
+import matplotlib.pyplot as plt
+import codecs
+import sys
+
+columns = [
+            'payment',
+            'shipping_company',
+            'use_points',
+            'coupon_code',
+            'use_coupon',
+            'discount',
+            'change',
+            'terminal',
+            'categoly',
+            'repeat'
+            ]
+
+with codecs.open('datasets.csv' ,'r', 'Shift-JIS', 'ignore') as file:
+    df = pd.read_table(file, delimiter= ',')
+df.columns = columns
+
+print(df.head())
