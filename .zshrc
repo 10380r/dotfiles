@@ -14,8 +14,11 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
 ## PROMPT--------------------------------------------
-PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~ %{${vcs_info_msg_0_}%}%{${reset_color}%  
+PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~ 
 %# "
+#PROMPT="%{${fg[green]}%}%n@%{${reset_color}%} %~ %{${vcs_info_msg_0_}%}%{${reset_color}% 
+#%# "
+setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
 autoload -Uz vcs_info
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
@@ -23,7 +26,6 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:git*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
 # end of PROMPT--------------------------------------
 # 環境変数
 export LANG=ja_JP.UTF-8
@@ -62,3 +64,23 @@ alias v="vim"
 alias vi="vim" # vi使いづらい
 #pyenvよりデフォのPythonが優先されてしまうので、それを回避
 eval "$(pyenv init -)"
+
+# ターミナルからググる-------------------------------
+google(){
+    if [ $(echo $1 | egrep "^-[cfs]$") ]; then
+        local opt="$1"
+        shift
+    fi
+    local url="https://www.google.co.jp/search?q=${*// /+}"
+    local app="/Applications"
+    local g="${app}/Google Chrome.app"
+    local f="${app}/Firefox.app"
+    local s="${app}/Safari.app"
+    case ${opt} in
+        "-g")   open "${url}" -a "$g";;
+        "-f")   open "${url}" -a "$f";;
+        "-s")   open "${url}" -a "$s";;
+        *)      open "${url}";;
+    esac
+}
+# -----------------------------------------------------
