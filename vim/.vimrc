@@ -44,6 +44,7 @@ set number
 set clipboard+=unnamed
 set autoindent
 set smartindent
+set hlsearch
 " ビープ音の代わりに画面をフラッシュさせる動作を止める
 set novisualbell
 " UTF-8をデフォルトの文字エンコーディングにする
