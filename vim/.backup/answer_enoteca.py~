@@ -1,0 +1,24 @@
+import urllib.request
+from bs4 import BeautifulSoup
+
+for num in range(1,6):
+    url = 'https://www.enoteca.co.jp/item/list?page='+str(num)+'&_color=2&_qty=1&_size=750&_sp=asc#list'
+    soup = BeautifulSoup(urllib.request.urlopen(url))
+    table = soup.findAll('td',class_='tdtxt')
+    
+    for i in table:
+        #title = i.find('div',class_ = 'product-ttl').text.replace(' ','').replace('\n','')
+        title = i.find('a').text.replace(' ','').replace('\n','')
+        tr = i.findAll('tr')
+        col = tr[1].text.replace(' ','').replace('\n','').replace('タイプ：','').split('サイズ')[0]
+        reg = tr[2].text.replace('生産地','').replace('\n', '').replace('：>', '').replace(' ','')
+        try:
+            des = tr[3].text.replace(' ','').replace('説明：','')
+        except:
+            pass
+        
+        print('名前：',title)
+        print('タイプ：',col)
+        print('原産国：',reg)
+        print('説明：'+ des)
+        print('---------------------------------')

@@ -1,0 +1,14 @@
+# about Django
+Django is one of the famous Framework
+
+## 導入
+`pip isntall django`
+
+## プロジェクトを作成
+djangoは１つのアプリケーションをプロジェクトを指す
+今回はマネジメントを行うwebアプリを作る
+-> `manage_project`
+`$ django-admin startproject `
+
+そうすると以下のような構造ができる
+```python

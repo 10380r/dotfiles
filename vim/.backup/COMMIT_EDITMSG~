@@ -2,11 +2,28 @@
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 #
-# Committer: 10380r <10380r@MacBook-Pro-5.local>
-#
 # On branch master
+# Your branch is up to date with 'origin/master'.
+#
 # Changes to be committed:
-#	deleted:    .ipynb_checkpoints/cottaScraping-checkpoint.ipynb
-#	deleted:    .ipynb_checkpoints/csv2excel-checkpoint.ipynb
-#	deleted:    .ipynb_checkpoints/model-checkpoint.ipynb
+#	deleted:    tmux.conf
+#	modified:   tmux/tmux.conf
+#
+# Changes not staged for commit:
+#	deleted:    .zsh_profile
+#	modified:   vim/.backup/.tmux.conf~
+#	modified:   vim/.backup/.vimrc~
+#	modified:   vim/.backup/COMMIT_EDITMSG~
+#	modified:   vim/.backup/dotfilesLink.sh~
+#	modified:   vim/.backup/twitter.py~
+#	deleted:    zsh_profile
+#
+# Untracked files:
+#	jupyter/jupyter
+#	vim/.backup/answer_enoteca.py~
+#	vim/.backup/battery~
+#	vim/.backup/json.txt~
+#	vim/.backup/tmux.conf~
+#	vim/.backup/wifi~
+#	vim/vim
 #

@@ -45,6 +45,9 @@ set clipboard+=unnamed
 set autoindent
 set smartindent
 set hlsearch
+" 空白文字を可視化
+set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " ビープ音の代わりに画面をフラッシュさせる動作を止める
 set novisualbell
 " UTF-8をデフォルトの文字エンコーディングにする
