@@ -3,27 +3,47 @@
 # with '#' will be ignored, and an empty message aborts the commit.
 #
 # On branch master
-# Your branch is up to date with 'origin/master'.
-#
 # Changes to be committed:
-#	deleted:    tmux.conf
-#	modified:   tmux/tmux.conf
+#	modified:   send_mail.py
 #
 # Changes not staged for commit:
-#	deleted:    .zsh_profile
-#	modified:   vim/.backup/.tmux.conf~
-#	modified:   vim/.backup/.vimrc~
-#	modified:   vim/.backup/COMMIT_EDITMSG~
-#	modified:   vim/.backup/dotfilesLink.sh~
-#	modified:   vim/.backup/twitter.py~
-#	deleted:    zsh_profile
+#	modified:   ../.idea/vcs.xml
 #
 # Untracked files:
-#	jupyter/jupyter
-#	vim/.backup/answer_enoteca.py~
-#	vim/.backup/battery~
-#	vim/.backup/json.txt~
-#	vim/.backup/tmux.conf~
-#	vim/.backup/wifi~
-#	vim/vim
+#	../.DS_Store
+#	../.idea/dev.iml
+#	../.idea/libraries/
+#	../.idea/misc.xml
+#	../.idea/modules.xml
+#	../.idea/workspace.xml
+#	../.ipynb_checkpoints/
+#	../amazon-linebot/
+#	../audio/
+#	../emoji_moon/
+#	../geckodriver.log
+#	../ghostdriver.log
+#	../img/
+#	../indeed/
+#	../instagram_scraping/
+#	../linebot_amazon/
+#	../manage_project/
+#	../ml/
+#	../moondrawing/
+#	../morphological-analysis/
+#	../narumi_messager/
+#	../ocr.py
+#	../opening-words/
+#	../rccn/
+#	../sagawa/
+#	../sandbox/
+#	../selenium_insta/
+#	../smile-detection/
+#	../stock2csv/
+#	../text.txt
+#	../tomiz_analyze/
+#	../topbuzz/
+#	../ukiyoe/
+#	../watson/
+#	../word-analysis/
+#	../words/
 #
