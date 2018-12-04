@@ -3,47 +3,17 @@
 # with '#' will be ignored, and an empty message aborts the commit.
 #
 # On branch master
+# Your branch is up to date with 'origin/master'.
+#
 # Changes to be committed:
-#	modified:   send_mail.py
-#
-# Changes not staged for commit:
-#	modified:   ../.idea/vcs.xml
-#
-# Untracked files:
-#	../.DS_Store
-#	../.idea/dev.iml
-#	../.idea/libraries/
-#	../.idea/misc.xml
-#	../.idea/modules.xml
-#	../.idea/workspace.xml
-#	../.ipynb_checkpoints/
-#	../amazon-linebot/
-#	../audio/
-#	../emoji_moon/
-#	../geckodriver.log
-#	../ghostdriver.log
-#	../img/
-#	../indeed/
-#	../instagram_scraping/
-#	../linebot_amazon/
-#	../manage_project/
-#	../ml/
-#	../moondrawing/
-#	../morphological-analysis/
-#	../narumi_messager/
-#	../ocr.py
-#	../opening-words/
-#	../rccn/
-#	../sagawa/
-#	../sandbox/
-#	../selenium_insta/
-#	../smile-detection/
-#	../stock2csv/
-#	../text.txt
-#	../tomiz_analyze/
-#	../topbuzz/
-#	../ukiyoe/
-#	../watson/
-#	../word-analysis/
-#	../words/
+#	deleted:    .zsh_profile
+#	modified:   dotfilesLink.sh
+#	new file:   jupyter/jupyter
+#	modified:   vim/.backup/.zsh_profile~
+#	modified:   vim/.backup/COMMIT_EDITMSG~
+#	modified:   vim/.backup/memo.txt~
+#	new file:   vim/.backup/send_mail.py~
+#	new file:   zsh/zsh_profile
+#	renamed:    zshrc -> zsh/zshrc
+#	deleted:    zsh_profile
 #

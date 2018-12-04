@@ -1,2 +1,13 @@
+if [ -f ~/.zshrc ] ; then
+. ~/.zshrc
+fi
+
 cat memo.txt
+# rbenvのパス
 eval "$(rbenv init -)"
+# gemのパス 
+export PATH="$HOME/.rbenv/shims:$PATH"
+# pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
