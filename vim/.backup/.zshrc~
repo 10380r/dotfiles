@@ -62,11 +62,12 @@ alias line="open /Applications/LINE.app"
 alias slack="open /Applications/Slack.app"
 alias v="vim"
 alias vi="vim" # vi使いづらい
+export LANG=en_US
 #pyenvよりデフォのPythonが優先されてしまうので、それを回避
 eval "$(pyenv init -)"
 
 # ターミナルからググる-------------------------------
-google(){
+g(){
     if [ $(echo $1 | egrep "^-[cfs]$") ]; then
         local opt="$1"
         shift
