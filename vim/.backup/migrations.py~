@@ -1,0 +1,36 @@
+from django.db import models, migrations
+
+class Students(models.Model):
+    name  = models.CharField(max_length=100)
+    mail  = models.EmailField(max_length=200)
+    grade = models.IntegerField(default=3)
+    goal  = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.name
+           
+class Words(models.Model):
+    word  = models.CharField(max_length=100)
+    sence = models.CharField(max_length=100)
+    voice = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.word+' '+self.sence
+
+
+class Test(models.Model):
+    mode       = models.BooleanField()
+    student_id = models.ForeignKey('Students',on_delete=models.CASCADE)
+    word_id    = models.ForeignKey('Words',on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.mode
+
+
+class Missword(models.Model):
+    word_id    = models.ForeignKey('Words',on_delete=models.CASCADE)
+    student_id = models.ForeignKey('Students',on_delete=models.CASCADE)
+    count_miss = 0
+    
+    def __str__(self):
+        return self.student_id

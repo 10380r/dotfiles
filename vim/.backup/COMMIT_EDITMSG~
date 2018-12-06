@@ -6,34 +6,11 @@
 # Your branch is up to date with 'origin/master'.
 #
 # Changes to be committed:
-#	new file:   .DS_Store
-#	new file:   README.md
-#	modified:   getmp4.py
-#	new file:   memo
-#	new file:   results/a1.mp4
-#
-# Changes not staged for commit:
-#	modified:   .DS_Store
-#	deleted:    results/a1.mp4
-#
-# Untracked files:
-#	results/2018-12-051.mp4
-#	results/2018-12-0510.mp4
-#	results/2018-12-0511.mp4
-#	results/2018-12-0512.mp4
-#	results/2018-12-0513.mp4
-#	results/2018-12-0514.mp4
-#	results/2018-12-0515.mp4
-#	results/2018-12-0516.mp4
-#	results/2018-12-0517.mp4
-#	results/2018-12-0518.mp4
-#	results/2018-12-0519.mp4
-#	results/2018-12-052.mp4
-#	results/2018-12-053.mp4
-#	results/2018-12-054.mp4
-#	results/2018-12-055.mp4
-#	results/2018-12-056.mp4
-#	results/2018-12-057.mp4
-#	results/2018-12-058.mp4
-#	results/2018-12-059.mp4
+#	modified:   vim/.backup/.zsh_profile~
+#	modified:   vim/.backup/.zshrc~
+#	modified:   vim/.backup/COMMIT_EDITMSG~
+#	modified:   vim/.backup/getmp4.py~
+#	new file:   vim/.swap/getmp4.py.swp
+#	modified:   zsh/zsh_profile
+#	modified:   zsh/zshrc
 #
