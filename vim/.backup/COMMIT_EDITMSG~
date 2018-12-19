@@ -2,15 +2,23 @@
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
 #
+# Committer: tommy <tommy@Ryunosukes-MacBook-Pro.local>
+#
 # On branch master
 # Your branch is up to date with 'origin/master'.
 #
 # Changes to be committed:
-#	modified:   vim/.backup/.zsh_profile~
-#	modified:   vim/.backup/.zshrc~
-#	modified:   vim/.backup/COMMIT_EDITMSG~
-#	modified:   vim/.backup/getmp4.py~
-#	new file:   vim/.swap/getmp4.py.swp
 #	modified:   zsh/zsh_profile
-#	modified:   zsh/zshrc
+#
+# Changes not staged for commit:
+#	modified:   vim/.backup/.vimrc~
+#	modified:   vim/.backup/.zsh_profile~
+#	modified:   vim/bundle/indentLine (new commits)
+#	modified:   vim/bundle/nerdtree (new commits)
+#	modified:   vim/bundle/vim-fugitive (new commits)
+#	deleted:    vim/bundle/vim-indent-guides
+#
+# Untracked files:
+#	colors/
+#	vim/.swap/memo.txt.swp
 #

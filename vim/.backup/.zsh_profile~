@@ -1,3 +1,4 @@
+echo Load start .zsh_profile
 if [ -f ~/.zshrc ] ; then
 . ~/.zshrc
 fi
@@ -9,3 +10,4 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 # pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null ; then eval "$(pyenv init -)"; fi
+echo Load finish .zsh_profile
