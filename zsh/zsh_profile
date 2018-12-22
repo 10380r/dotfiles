@@ -1,3 +1,4 @@
+source memo.txt
 if [ -f ~/.zshrc ] ; then
 . ~/.zshrc
 fi

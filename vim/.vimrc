@@ -45,6 +45,7 @@ set clipboard+=unnamed
 set autoindent
 set smartindent
 set hlsearch
+set clipboard=unnamed,autoselect
 " 空白文字を可視化
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
@@ -57,7 +58,5 @@ scriptencoding utf-8
 set fileencodings=utf-8,cp932,eucjp
 " jjと入力して挿入モードから抜ける
 inoremap jj <esc>
-" ハイライト終了
-inoremap <esc><esc> :noh
 " delateキー有効
 set backspace=indent,eol,start
