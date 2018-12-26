@@ -1,13 +1,13 @@
-echo Load start .zsh_profile
 if [ -f ~/.zshrc ] ; then
 . ~/.zshrc
 fi
 
-# rbenvのパス
+# rbenv
 eval "$(rbenv init -)"
+# pyenv
+eval "$(pyenv init -)"
+
 # gemのパス 
 export PATH="$HOME/.rbenv/shims:$PATH"
 # pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null ; then eval "$(pyenv init -)"; fi
-echo Load finish .zsh_profile
+# export PYENV_ROOT=/usr/local/var/pyenv

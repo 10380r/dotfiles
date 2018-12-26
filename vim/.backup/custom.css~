@@ -1,23 +1,15 @@
 div#notebook {
- font-family: RictyDiscord-Regular !important;
- font-size: 12pt !important;
- line-height: 120% !important;
+ font-family: sans-serif;
+ font-size: 13pt;
+ line-height: 170%;
  color: #b5c2d9;
  -webkit-font-smoothing: antialiased !important;
+ padding-top: 25px !important;
 }
-
-.CodeMirror pre, .output pre {
-  font-family: RictyDiscord-Regular !important;
-}
-
-#notebook-container {
-    width: 95% !important;
-}
-
 body,
 div.body {
- font-family: RictyDiscord-Regular !important;
- font-size: 12pt !important;
+ font-family: sans-serif;
+ font-size: 13pt;
  color: #899ab8;
  background-color: #1d1e23;
  background: #1d1e23;
@@ -31,7 +23,7 @@ body.notebook_app {
  overflow-y: hidden;
 }
 a {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  color: #899ab8;
  -webkit-font-smoothing: antialiased !important;
 }
@@ -39,6 +31,27 @@ a:hover,
 a:focus {
  color: #bbc2e0;
  -webkit-font-smoothing: antialiased !important;
+}
+div#maintoolbar {
+ position: absolute;
+ width: 90%;
+ margin-left: -10%;
+ padding-right: 8%;
+ float: left;
+ background: transparent !important;
+}
+#maintoolbar {
+ margin-bottom: -3px;
+ margin-top: 0px;
+ border: 0px;
+ min-height: 27px;
+ padding-top: 2px;
+ padding-bottom: 0px;
+}
+#maintoolbar .container {
+ width: 75%;
+ margin-right: auto;
+ margin-left: auto;
 }
 .list_header,
 div#notebook_list_header.row.list_header {
@@ -57,19 +70,19 @@ i.fa.fa-folder {
  -moz-osx-font-smoothing: grayscale;
 }
 #running .panel-group .panel .panel-heading {
- font-size: 12pt;
+ font-size: 14pt;
  color: #899ab8;
  padding: 8px 8px;
  background: #2e3642;
  background-color: #2e3642;
 }
 #running .panel-group .panel .panel-heading a {
- font-size: 12pt;
+ font-size: 14pt;
  color: #899ab8;
 }
 #running .panel-group .panel .panel-heading a:focus,
 #running .panel-group .panel .panel-heading a:hover {
- font-size: 12pt;
+ font-size: 14pt;
  color: #899ab8;
 }
 #running .panel-group .panel .panel-body .list_container .list_item {
@@ -92,7 +105,7 @@ button#refresh_cluster_list {
  border: none !important;
 }
 div.running_list_info.toolbar_info {
- font-size: 12px;
+ font-size: 15px;
  padding: 4px 0 4px 0;
  margin-top: 5px;
  margin-bottom: 8px;
@@ -173,13 +186,13 @@ span#sort-name.btn.btn-xs.btn-default.sort-action:hover .fa {
  font-size: 18px;
 }
 div#notebook_toolbar div.dynamic-instructions {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 17px;
  color: #526488;
 }
 span#login_widget > .button,
 #logout {
- font-family: RictyDiscord-Regular !important;
+ font-family: "Proxima Nova", sans-serif;
  color: #899ab8;
  background: transparent;
  background-color: transparent;
@@ -364,14 +377,14 @@ div.list_item:hover {
  margin-top: -2px;
 }
 ul#tabs a {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13.5pt;
  font-weight: normal;
  font-style: normal;
  text-shadow: none !important;
 }
 .nav-tabs {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13.5pt;
  font-weight: normal;
  font-style: normal;
@@ -432,7 +445,7 @@ ul#tabs a {
  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 div#notebook {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  padding-top: 4px;
 }
@@ -444,28 +457,28 @@ div#notebook {
  background-color: #1d1e23;
  min-height: 0px;
  box-shadow: none;
- width: 1200px;
+ width: 980px;
  margin-right: auto;
  margin-left: auto;
 }
 div#ipython-main-app.container {
- width: 1200px;
+ width: 980px;
  margin-right: auto;
  margin-left: auto;
  margin-right: auto;
  margin-left: auto;
 }
 .container {
- width: 1200px;
+ width: 980px;
  margin-right: auto;
  margin-left: auto;
 }
 div#menubar-container {
  width: 100%;
- width: 1200px;
+ width: 980px;
 }
 div#header-container {
- width: 1200px;
+ width: 980px;
 }
 .notebook_app #header,
 .edit_app #header {
@@ -475,7 +488,7 @@ div#header-container {
 }
 #header,
 .edit_app #header {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  box-shadow: none;
  background-color: #1d1e23;
@@ -517,15 +530,15 @@ p.navbar-text.indicator_area {
  color: #7aa05d;
 }
 .navbar-default {
- font-family: RictyDiscord-Regular !important;
- font-size: 12pt;
+ font-family: sans-serif;
+ font-size: 13pt;
  background-color: #1d1e23;
  border-color: #313643;
  line-height: 1.5em;
  padding-bottom: 0px;
 }
 .navbar-default .navbar-nav > li > a {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  color: #899ab8;
  display: block;
@@ -640,13 +653,12 @@ div.notification_widget.info,
 .item_buttons .running-indicator {
  padding-top: 4px;
  color: #94c273;
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  text-rendering: auto;
  -webkit-font-smoothing: antialiased;
 }
 #notification_trusted {
- font-family: RictyDiscord-Regular !important;
- font-size: 17px !important;
+ font-family: sans-serif;
  border: none;
  background: transparent;
  background-color: transparent;
@@ -660,7 +672,7 @@ div.notification_area {
  float: right !important;
  position: static;
  cursor: pointer;
- padding-top: 7px;
+ padding-top: 6px;
  padding-right: 4px;
 }
 div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
@@ -684,7 +696,7 @@ div#notification_notebook.notification_widget.btn.btn-xs.navbar-btn {
  border-left: 2px solid #7aa05d;
  padding-top: 0px;
  padding-bottom: 4px;
- margin-top: 8px !important;
+ margin-top: 10px !important;
  margin-left: -2px;
  padding-left: 5px !important;
 }
@@ -794,14 +806,14 @@ i.fa.fa-icon {
 }
 .fa {
  display: inline-block;
- font: normal normal normal 10pt/1 "FontAwesome", RictyDiscord-Regular !important;
+ font: normal normal normal 10pt/1 "FontAwesome", sans-serif;
  text-rendering: auto;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
 }
 .dropdown-menu {
- font-family: RictyDiscord-Regular !important;
- font-size: 12pt;
+ font-family: sans-serif;
+ font-size: 13pt;
  box-shadow: none;
  padding: 0px;
  text-align: left;
@@ -811,7 +823,7 @@ i.fa.fa-icon {
  line-height: 1;
 }
 .dropdown-menu:hover {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  box-shadow: none;
  padding: 0px;
@@ -822,7 +834,7 @@ i.fa.fa-icon {
  line-height: 1;
 }
 .dropdown-menu > li > a {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 12.0pt;
  display: block;
  padding: 10px 20px 9px 10px;
@@ -856,7 +868,7 @@ i.fa.fa-icon {
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 12.0pt;
  font-weight: normal;
  color: #526488;
@@ -886,7 +898,7 @@ div.kse-dropdown > .dropdown-menu,
 }
 .btn,
 .btn-default {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  color: #899ab8;
  background: #303542;
  background-color: #303542;
@@ -1093,8 +1105,8 @@ div.dynamic-buttons > button,
  z-index: 2;
 }
 .dropdown-header {
- font-family: RictyDiscord-Regular !important;
- font-size: 12pt !important;
+ font-family: sans-serif !important;
+ font-size: 13pt !important;
  color: #7aa05d !important;
  border-bottom: none !important;
  padding: 0px !important;
@@ -1103,7 +1115,7 @@ div.dynamic-buttons > button,
 span#last-modified.btn.btn-xs.btn-default.sort-action,
 span#sort-name.btn.btn-xs.btn-default.sort-action,
 span#file-size.btn.btn-xs.btn-default.sort-action {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 16px;
  background-color: transparent;
  background: transparent;
@@ -1118,7 +1130,7 @@ span#last-modified.btn.btn-xs.btn-default.sort-action {
 }
 button.close {
  border: 0px none;
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 20pt;
  font-weight: normal;
 }
@@ -1237,7 +1249,7 @@ div.modal-footer > button:hover {
  transition: 200ms ease;
 }
 .modal-content {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 12.0pt;
  position: relative;
  background: #2e3642;
@@ -1248,7 +1260,7 @@ div.modal-footer > button:hover {
  outline: none;
 }
 .modal-header {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  color: #899ab8;
  background: #2e3642;
@@ -1258,7 +1270,7 @@ div.modal-footer > button:hover {
  min-height: 16.4286px;
 }
 .modal-content h4 {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 16pt;
  color: #899ab8;
  padding: 5px;
@@ -1292,7 +1304,7 @@ div.panel,
 div.panel-default,
 .panel,
 .panel-default {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  background-color: #384152;
  color: #899ab8;
@@ -1320,7 +1332,7 @@ div.container-fluid {
 }
 div.form-control,
 .form-control {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: initial;
  color: #899ab8;
  background-color: #262c36;
@@ -1446,8 +1458,9 @@ th,
 td,
 span,
 a {
- text-rendering: auto;
- -webkit-font-smoothing: antialiased;
+ text-rendering: geometricPrecision;
+ -webkit-font-smoothing: subpixel-antialiased;
+ font-weight: 400;
 }
 div.input_area {
  background-color: #2c303c;
@@ -1571,11 +1584,11 @@ div.cell.text_cell.jupyter-soft-selected,
 div.cell.text_cell.selected.jupyter-soft-selected {
  border-left-color: #48536f !important;
  border-left-width: 0px !important;
- padding-left: 7px !important;
+ padding-left: 26px !important;
  border-right-color: #48536f !important;
  border-right-width: 0px !important;
  background: #48536f !important;
- border-radius: 6px !important;
+ border-radius: 5px !important;
 }
 div.cell.jupyter-soft-selected .input,
 div.cell.selected.jupyter-soft-selected .input {
@@ -1678,6 +1691,7 @@ div.output_subarea.output_text {
  color: #b1bed6;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
+ margin-left: 11.5px;
 }
 div.output_area pre {
  font-family: monospace, monospace;
@@ -1699,7 +1713,7 @@ div.output_html {
 }
 div.output_subarea {
  overflow-x: auto;
- padding: 0.8em !important;
+ padding: 1.2em !important;
  -webkit-box-flex: 1;
  -moz-box-flex: 1;
  box-flex: 1;
@@ -1717,7 +1731,6 @@ div.btn.btn-default.output_collapsed:hover {
 }
 div.prompt.output_prompt {
  font-family: monospace, monospace;
- font-size: 9.5pt !important;
  font-weight: bold !important;
  background-color: #373e4b;
  color: transparent;
@@ -1725,21 +1738,20 @@ div.prompt.output_prompt {
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
  border-bottom-right-radius: 0px;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
+ min-width: 11.5ex !important;
+ width: 11.5ex !important;
  border-right: 2px solid transparent;
 }
 div.out_prompt_overlay.prompt {
  font-family: monospace, monospace;
- font-size: 9.5pt !important;
  font-weight: bold !important;
  background-color: #373e4b;
  border-bottom-left-radius: 2px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
  border-bottom-right-radius: 0px;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
+ min-width: 11.5ex !important;
+ width: 11.5ex !important;
  border-right: 2px solid transparent;
  color: transparent;
 }
@@ -1752,8 +1764,8 @@ div.out_prompt_overlay.prompt:hover {
  -moz-border-radius: 2px;
  border-top-right-radius: 0px;
  border-top-left-radius: 0px;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
+ min-width: 11.5ex !important;
+ width: 11.5ex !important;
  border-right: 2px solid #3e4458 !important;
 }
 div.cell.code_cell .output_prompt {
@@ -1775,7 +1787,7 @@ div.cell.selected .out_prompt_overlay.prompt {
 div.text_cell,
 div.text_cell_render pre,
 div.text_cell_render {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  line-height: 130% !important;
  color: #abb7ce;
@@ -1806,28 +1818,28 @@ div.cell.text_cell .CodeMirror pre {
  line-height: 170% !important;
 }
 div.cell.text_cell.rendered.selected {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  line-height: 170% !important;
  background: #2c303c;
  background-color: #2c303c;
  border-radius: 0px;
 }
 div.cell.text_cell.unrendered.selected {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  line-height: 170% !important;
  background: #2c303c;
  background-color: #2c303c;
  border-radius: 0px;
 }
 div.cell.text_cell.selected {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  line-height: 170% !important;
  background: #2c303c;
  background-color: #2c303c;
  border-radius: 0px;
 }
 .edit_mode div.cell.text_cell.selected {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  line-height: 170% !important;
  background: #2c303c;
  background-color: #2c303c;
@@ -1836,7 +1848,7 @@ div.cell.text_cell.selected {
 div.text_cell.unrendered,
 div.text_cell.unrendered.selected,
 div.edit_mode div.text_cell.unrendered {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  line-height: 170% !important;
  background: #2c303c;
  background-color: #2c303c;
@@ -1986,7 +1998,7 @@ div.text_cell_render h4,
 div.rendered_html h4,
 div.text_cell_render h5,
 div.rendered_html h5 {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  margin: 0.4em .2em .3em .2em !important;
 }
 .rendered_html h1:first-child,
@@ -2070,11 +2082,11 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
  border: none;
 }
 .rendered_html td {
- font-family: RictyDiscord-Regular !important !important;
+ font-family: sans-serif !important;
  font-size: 9.3pt;
 }
 .rendered_html table {
- font-family: RictyDiscord-Regular !important !important;
+ font-family: sans-serif !important;
  margin-left: 8px;
  margin-right: auto;
  border: none;
@@ -2084,7 +2096,7 @@ div#_vivaldi-spatnav-focus-indicator._vivaldi-spatnav-focus-indicator {
  table-layout: fixed;
 }
 .rendered_html thead {
- font-family: RictyDiscord-Regular !important !important;
+ font-family: sans-serif !important;
  font-size: 10.3pt !important;
  background: #2e3642;
  color: #d4d8ec;
@@ -2112,7 +2124,7 @@ div.widget-area {
  color: #b1bed6;
 }
 div.widget-area a {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 12.0pt;
  font-weight: normal;
  font-style: normal;
@@ -2121,7 +2133,7 @@ div.widget-area a {
 }
 div.widget-area a:hover,
 div.widget-area a:focus {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 12.0pt;
  font-weight: normal;
  font-style: normal;
@@ -2193,7 +2205,7 @@ div.widget-label {
  margin-left: 12px;
 }
 .rendered_html :link {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 100%;
  color: #7aa05d;
  text-decoration: underline;
@@ -2205,7 +2217,7 @@ div.widget-label {
 }
 .rendered_html :visited:hover,
 .rendered_html :link:hover {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 100%;
  color: #64963e;
 }
@@ -2248,7 +2260,7 @@ div#nbextensions-configurator-container.container,
  margin-left: auto;
 }
 div.nbext-selector > nav > .nav > li > a {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 10.5pt;
  padding: 2px 5px;
 }
@@ -2274,7 +2286,7 @@ div.nbext-selector > nav > .nav > li.active:hover {
  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 div.nbext-readme > .nbext-readme-contents > .rendered_html {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 11.5pt;
  line-height: 145%;
  padding: 1em 1em;
@@ -2573,7 +2585,7 @@ video {
  z-index: 1;
 }
 .typeahead-field input {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  color: #b5c2d9;
  border: none;
  font-size: 28pt;
@@ -2591,7 +2603,7 @@ body > div.modal.cmd-palette.typeahead-field {
  background-color: #2b3850;
 }
 .typeahead-container button {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 28pt;
  background-color: #2e3642;
  border: none;
@@ -2626,7 +2638,7 @@ body > div.modal.cmd-palette.typeahead-field {
 }
 .typeahead-dropdown,
 .typeahead-list {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-size: 13pt;
  color: #899ab8;
  background-color: #202937;
@@ -2768,6 +2780,9 @@ div#short-key-bindings-intro.well,
  box-shadow: none;
 }
 .terminal-app {
+ background: #1d1e23;
+}
+.terminal-app > #header {
  background: #1d1e23;
 }
 .terminal-app .terminal {
@@ -3096,11 +3111,13 @@ div.CodeMirror-linenumber,
  color: #94c273;
 }
 div.CodeMirror span.CodeMirror-matchingbracket {
- color: #d8dcee;
+ color: #ffffff;
+ font-weight: bold;
  background-color: #4c8be2;
 }
 div.CodeMirror span.CodeMirror-nonmatchingbracket {
- color: #d8dcee;
+ color: #ffffff;
+ font-weight: bold;
  background: rgba(192,57,67,.3) !important;
 }
 .cm-header-1 {
@@ -3122,7 +3139,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
  color: #61afef;
 }
 div.cell.text_cell .cm-s-default .cm-header {
- font-family: RictyDiscord-Regular !important;
+ font-family: sans-serif;
  font-weight: normal;
  color: #7aa05d !important;
  margin-top: 0.3em !important;
@@ -3214,24 +3231,10 @@ body :focus .MathJax {
  width: auto;
 }
 div#maintoolbar {
- margin-left: 8px !important;
+ display: none !important;
 }
-.toolbar.container {
- width: 100% !important;
-}
-span.save_widget span.filename {
- margin-left: 8px;
- font-size: 120%;
- color: #7aa05d;
- background-color: #2c303c;
-}
-span.save_widget span.filename:hover {
- color: #94c273;
- background-color: #2c303c;
-}
-#menubar {
- padding-top: 4px;
- background-color: #1d1e23;
+#header-container {
+ display: none !important;
 }
 
 <script>

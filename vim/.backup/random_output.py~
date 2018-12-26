@@ -1,0 +1,32 @@
+import tkinter as Tk
+import sys
+
+
+class Application(Tk.Frame):
+    def __init__(self, master=None):
+        Tk.Frame.__init__(self, master)
+        self.pack(expand=1, fill=Tk.BOTH, anchor=Tk.NW)
+        self.create_widgets()
+        sys.stdout = self.StdoutRedirector(self.text)
+        sys.stderr = self.StderrRedirector(self.text)
+
+    class IORedirector(object):
+        def __init__(self, text_area):
+            self.text_area = text_area
+
+    class StdoutRedirector(IORedirector):
+        def write(self, st):
+            self.tedxt_area.insert(Tk.INSERT, st)
+
+    class StderrRedirector(IORedirector):
+        def write(self, st):
+            self.text_area.insert(Tk.INSERT, st)
+   
+sys.stdout = sys.__stdout__
+sys.stderr = sys.__stderr__
+
+
+root = Tk.Tk()
+app = Application(master=root)
+app.mainloop()
+                    
