@@ -8,18 +8,22 @@ colors
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
-# prompt---------------
-PROMPT='%{${fg[green]}%}%n@%{${reset_color}%}%{${fg[magenta]}%}%~ %{${reset_color}%}'
+#prompt-----------------------------------------
+#http://www.sirochro.com/note/terminal-zsh-prompt-customize/
+setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
+autoload -Uz vcs_info
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:git*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+PROMPT_COMMAND='add_line'
+#↓ ユーザー名付き（今の所使用未定）
+#PROMPT='%{${fg[green]}%}%n@%{${reset_color}%}%{${fg[magenta]}%}%~%{${reset_color}%} '
+PROMPT='%{${fg[green]}%}%~%{${reset_color}%} '
 PROMPT=$PROMPT' ${vcs_info_msg_0_} %{${fg[red]}%}%} %{${reset_color}%}
 $ '
-#setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
-#autoload -Uz vcs_info
-#zstyle ':vcs_info:git:*' check-for-changes true
-#zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-#zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-#zstyle ':vcs_info:git*' formats "%F{green}%c%u[%b]%f"
-#zstyle ':vcs_info:*' actionformats '[%b|%a]'
-#precmd () { vcs_info }
 # end of PROMPT---------
 # 環境変数
 #export LANG=ja_JP.UTF-8
@@ -48,6 +52,7 @@ setopt no_beep
 # Ctrl+Dでzshを終了しない
 setopt ignore_eof
 # 入力をミスった時に、それに似たコマンドを表示してくれる
+# https://original-game.com/terminal-zsh2/
 setopt correct
 
 # 各エイリアス

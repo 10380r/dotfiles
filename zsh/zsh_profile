@@ -11,25 +11,3 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.rbenv/shims:$PATH"
 # pyenv
 # export PYENV_ROOT=/usr/local/var/pyenv
-
-# プロンプト--------------------------------------------------------------------------------------------------------------------
-source ~/.git-prompt.sh
-
-# Gitブランチの状況を*+%で表示
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
-
-# 出力の後に改行を入れる
-function add_line {
-  if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
-    PS1_NEWLINE_LOGIN=true
-  else
-    printf '\n'
-  fi
-}
-PROMPT_COMMAND='add_line'
-
-# プロンプトで表示する内容
-export PS1='\h:\W \u \[\e[1;32m $(__git_ps1 "(%s)") \[\e[0m\] \$ '
