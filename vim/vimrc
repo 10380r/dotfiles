@@ -46,6 +46,7 @@ set autoindent
 set smartindent
 set hlsearch
 set clipboard=unnamed,autoselect
+set laststatus=2
 " 空白文字を可視化
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
