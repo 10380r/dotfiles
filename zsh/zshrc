@@ -9,7 +9,7 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 # remove file mark
 unsetopt list_types
 # prompt---------------
-PROMPT='%{${fg[green]}%}%n %{${reset_color}%} %{${fg[magenta]}%}%~ %{${reset_color}%}'
+PROMPT='%{${fg[green]}%}%n@%{${reset_color}%}%{${fg[magenta]}%}%~ %{${reset_color}%}'
 PROMPT=$PROMPT' ${vcs_info_msg_0_} %{${fg[red]}%}%} %{${reset_color}%}
 $ '
 #setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
