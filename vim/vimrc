@@ -33,11 +33,39 @@ autocmd Syntax,ColorScheme * highlight FullwidthSpace ctermbg=red guibg=white
 autocmd Syntax,ColorScheme * syn match FullwidthSpace containedin=ALL /　/
 
 colorscheme iceberg
+" UTF-8をデフォルトの文字エンコーディングにする
+set encoding=utf-8
+set fileencoding=utf-8
+"set scriptencoding=utf-8
+" エンコーディングの検出順を設定
+set fileencodings=utf-8,cp932,eucjp
+" jjと入力して挿入モードから抜ける
+" ファイル名表示
+set statusline=%F
+" 変更チェック表示
+set statusline+=%m
+" 読み込み専用かどうか表示
+set statusline+=%r
+" ヘルプページなら[HELP]と表示
+set statusline+=%h
+" プレビューウインドウなら[Prevew]と表示
+set statusline+=%w
+" これ以降は右寄せ表示
+set statusline+=%=
+" file encoding
+set statusline+=[ENC=%{&fileencoding}]
+" 現在行数/全行数
+set statusline+=[LOW=%l/%L]
+" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
+set laststatus=2
+
 set title
+
 set swapfile
 set directory=~/.vim/.swap
 set backup
 set backupdir=~/.vim/.backup
+
 set noundofile
 set cursorline
 set number
@@ -46,18 +74,39 @@ set autoindent
 set smartindent
 set hlsearch
 set clipboard=unnamed,autoselect
-set laststatus=2
+" 対応する括弧などをハイライト表示する
+set showmatch
+" 対応括弧に'<'と'>'のペアを追加
+set matchpairs& matchpairs+=<:>
 " 空白文字を可視化
 set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " ビープ音の代わりに画面をフラッシュさせる動作を止める
 set novisualbell
-" UTF-8をデフォルトの文字エンコーディングにする
-set fileencoding=utf-8
-scriptencoding utf-8
-" エンコーディングの検出順を設定
-set fileencodings=utf-8,cp932,eucjp
-" jjと入力して挿入モードから抜ける
 inoremap jj <esc>
 " delateキー有効
 set backspace=indent,eol,start
+" 長いテキストの折り返し
+set wrap
+" ESCを二回押すことでハイライトを消す
+nmap <silent> <Esc><Esc> :nohlsearch<CR>
+" j, k による移動を折り返されたテキストでも自然に振る舞うように変更
+nnoremap j gj
+nnoremap k gk
+" vを二回で行末まで選択
+vnoremap v $h
+
+" 色付け増やす---------------------------
+" haskell
+let hs_highlight_boolean = 1
+let hs_highlight_types = 1
+let hs_highlight_more_types = 1
+let hs_highlight_debug = 1
+let hs_allow_hash_operator = 1
+
+" python
+let py_highlight_boolean = 1
+let py_highlight_types = 1
+let py_highlight_more_types = 1
+let py_highlight_debug = 1
+let py_allow_hash_operator = 1
