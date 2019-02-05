@@ -23,6 +23,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 " color scheme
 Plugin 'cocopon/iceberg.vim'
+" 括弧や引用符の自動補完
+Plugin 'cohama/lexima.vim'
 " " よく使うコマンドをより素早く行うためのコマンドを多数持つプラグイン
 " Plugin 'tpope/vim-surround'
 call vundle#end()          " required by Vundle

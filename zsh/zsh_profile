@@ -1,7 +1,6 @@
 if [ -f ~/.zshrc ] ; then
 . ~/.zshrc
 fi
-
 # rbenv
 eval "$(rbenv init -)"
 # pyenv
