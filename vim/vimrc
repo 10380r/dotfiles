@@ -85,6 +85,8 @@ set list
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " ビープ音の代わりに画面をフラッシュさせる動作を止める
 set novisualbell
+" beep消す
+set belloff=all
 inoremap jj <esc>
 " delateキー有効
 set backspace=indent,eol,start
@@ -97,6 +99,13 @@ nnoremap j gj
 nnoremap k gk
 " vを二回で行末まで選択
 vnoremap v $h
+
+" html括弧補完
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
 
 " 色付け増やす---------------------------
 " haskell
