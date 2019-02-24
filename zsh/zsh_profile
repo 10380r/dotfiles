@@ -9,4 +9,6 @@ eval "$(pyenv init -)"
 # gemのパス 
 export PATH="$HOME/.rbenv/shims:$PATH"
 # pyenv
+alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
+# pyenv
 # export PYENV_ROOT=/usr/local/var/pyenv

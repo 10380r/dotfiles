@@ -49,12 +49,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 # beep を無効にする
-setopt no_beep
+setopt NO_BEEP
 # Ctrl+Dでzshを終了しない
 setopt ignore_eof
 # 入力をミスった時に、それに似たコマンドを表示してくれる
 # https://original-game.com/terminal-zsh2/
 setopt correct
+setopt AUTO_LIST
 
 # 各エイリアス
 alias gls="gls --color"
@@ -89,4 +90,12 @@ g(){
     esac
 }
 # -----------------------------------------------------
+# phpenv
 [[ -e ~/.phpbrew/zshrc ]] && source ~/.phpbrew/zshrc
+
+# 補完候補のメニュー選択で、矢印キーの代わりにhjklで移動出来るようにする。
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
