@@ -75,6 +75,7 @@ set clipboard+=unnamed
 set autoindent
 set smartindent
 set hlsearch
+set incsearch
 set clipboard=unnamed,autoselect
 " 対応する括弧などをハイライト表示する
 set showmatch
