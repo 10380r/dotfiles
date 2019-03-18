@@ -25,11 +25,18 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'cocopon/iceberg.vim'
 " 括弧や引用符の自動補完
 Plugin 'cohama/lexima.vim'
+" 選択範囲の差分を表示
+Plugin 'AndrewRadev/linediff.vim'
 " " よく使うコマンドをより素早く行うためのコマンドを多数持つプラグイン
 " Plugin 'tpope/vim-surround'
 call vundle#end()          " required by Vundle
 filetype plugin indent on  " required by Vundle
 " end of Vundle settings--------------------------------------------------
+" vimデフォルトの設定を読み込む(慣れたら使わないのがおすすめ)
+if filereadable("/usr/share/vim/vim81/defaults.vim")
+  so /usr/share/vim/vim81/defaults.vim
+endif
+
 " 全角スペースの背景を白に変更
 autocmd Syntax,ColorScheme * highlight FullwidthSpace ctermbg=red guibg=white
 autocmd Syntax,ColorScheme * syn match FullwidthSpace containedin=ALL /　/
