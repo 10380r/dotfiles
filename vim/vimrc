@@ -38,7 +38,7 @@ if filereadable("/usr/share/vim/vim81/defaults.vim")
 endif
 
 " 全角スペースの背景を白に変更
-autocmd Syntax,ColorScheme * highlight FullwidthSpace ctermbg=red guibg=white
+autocmd Syntax,ColorScheme * highlight FullwidthSpace guibg=white 
 autocmd Syntax,ColorScheme * syn match FullwidthSpace containedin=ALL /　/
 
 colorscheme iceberg
@@ -48,8 +48,8 @@ set fileencoding=utf-8
 "set scriptencoding=utf-8
 " エンコーディングの検出順を設定
 set fileencodings=utf-8,cp932,eucjp
-" jjと入力して挿入モードから抜ける
-" ファイル名表示
+" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
+set laststatus=2
 set statusline=%F
 " 変更チェック表示
 set statusline+=%m
@@ -65,11 +65,10 @@ set statusline+=%=
 set statusline+=[ENC=%{&fileencoding}]
 " 現在行数/全行数
 set statusline+=[LOW=%l/%L]
-" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
-set laststatus=2
+" ステータスライン常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
+highlight statusline term=NONE cterm=NONE guifg=green ctermfg=green ctermbg=black
 
 set title
-
 set swapfile
 set directory=~/.vim/.swap
 set backup
@@ -95,6 +94,7 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set novisualbell
 " beep消す
 set belloff=all
+" jjと入力して挿入モードから抜ける
 inoremap jj <esc>
 " delateキー有効
 set backspace=indent,eol,start
@@ -129,3 +129,7 @@ let py_highlight_types = 1
 let py_highlight_more_types = 1
 let py_highlight_debug = 1
 let py_allow_hash_operator = 1
+
+" Linediffのコマンドショートカット作成
+command! -range Ld  call linediff#Linediff(<line1>, <line2>, {})
+command! -bang  Ldr call linediff#LinediffReset(<q-bang>, {})
