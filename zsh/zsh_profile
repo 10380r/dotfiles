@@ -12,3 +12,4 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
 # pyenv
 # export PYENV_ROOT=/usr/local/var/pyenv
+export PATH=$HOME/.nodebrew/current/bin:$PATH
