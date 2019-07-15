@@ -70,6 +70,7 @@ alias line="open /Applications/LINE.app"
 alias slack="open /Applications/Slack.app"
 alias v="vim"
 alias vi="vim" # vi使いづらい
+alias bu="brew update && brew upgrade" # vi使いづらい
 #gitk
 alias gitk='/usr/local/bin/gitk'
 #pyenvよりデフォのPythonが優先されてしまうので、それを回避
