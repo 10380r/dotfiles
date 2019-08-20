@@ -22,7 +22,7 @@ Plugin 'scrooloose/nerdtree'
 " コメントON/OFFを手軽に実行
 Plugin 'tomtom/tcomment_vim'
 " color scheme
-Plugin 'cocopon/iceberg.vim'
+Plugin 'joshdick/onedark.vim'
 " 選択範囲の差分を表示
 Plugin 'AndrewRadev/linediff.vim'
 " " よく使うコマンドをより素早く行うためのコマンドを多数持つプラグイン
@@ -39,7 +39,7 @@ endif
 autocmd Syntax,ColorScheme * highlight FullwidthSpace guibg=white 
 autocmd Syntax,ColorScheme * syn match FullwidthSpace containedin=ALL /　/
 
-colorscheme iceberg
+colorscheme onedark
 " UTF-8をデフォルトの文字エンコーディングにする
 set encoding=utf-8
 set fileencoding=utf-8
