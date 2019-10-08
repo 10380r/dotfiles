@@ -1,21 +1,26 @@
 if [ -f ~/.zshrc ] ; then
 . ~/.zshrc
 fi
+
+# Homebrew ################################
+# https://qiita.com/takuya0301/items/695f42f6904e979f0152
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
+# ##########################################
+
+
+# Ruby #####################################
 # rbenv
 eval "$(rbenv init -)"
+# gem
+export PATH="$HOME/.rbenv/shims:$PATH"
+# #########################################
+
+# Python #################################
 # pyenv
 eval "$(pyenv init -)"
-
-# gemのパス 
-export PATH="$HOME/.rbenv/shims:$PATH"
-# pyenv
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
-# pyenv
-# export PYENV_ROOT=/usr/local/var/pyenv
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-# postgres
-export PATH=/usr/local/Cellar/postgresql/10.1/bin/:$PATH
-# anacondaの仮想環境関連
+# anaconda virtual environment
 . ${HOME}/miniconda3/etc/profile.d/conda.sh
 conda activate base
 # added by Anaconda3 5.0.1 installer
@@ -28,6 +33,19 @@ export PATH
 eval "$(pyenv init -)"
 . /Users/tommy/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
 conda activate
+# ##########################################
 
-# https://qiita.com/takuya0301/items/695f42f6904e979f0152
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
+# postgres ################################
+export PATH=/usr/local/Cellar/postgresql/10.1/bin/:$PATH
+# #########################################
+
+# Golang ##################################
+cat << 'EOS' >> ~/.zsh_profile
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$HOME/go/bin
+EOS
+# #########################################
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$HOME/go/bin

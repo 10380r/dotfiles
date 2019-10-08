@@ -25,6 +25,10 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'joshdick/onedark.vim'
 " 選択範囲の差分を表示
 Plugin 'AndrewRadev/linediff.vim'
+" pep8に変換してくれる
+Plugin 'tell-k/vim-autopep8'
+" ステータスバーをカッコよく
+Plugin 'itchyny/lightline.vim'
 " " よく使うコマンドをより素早く行うためのコマンドを多数持つプラグイン
 " Plugin 'tpope/vim-surround'
 call vundle#end()          " required by Vundle
@@ -39,32 +43,31 @@ endif
 autocmd Syntax,ColorScheme * highlight FullwidthSpace guibg=white 
 autocmd Syntax,ColorScheme * syn match FullwidthSpace containedin=ALL /　/
 
+" 背景色を暗くする
+autocmd ColorScheme * highlight Normal ctermbg=233
+autocmd ColorScheme * highlight LineNr ctermbg=232
+
 colorscheme onedark
 " UTF-8をデフォルトの文字エンコーディングにする
+" ステータスラインの設定
+" ref@ https://github.com/itchyny/lightline.vim
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
+
 set encoding=utf-8
 set fileencoding=utf-8
 "set scriptencoding=utf-8
 " エンコーディングの検出順を設定
 set fileencodings=utf-8,cp932,eucjp
-" ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
 set laststatus=2
-set statusline=%F
-" 変更チェック表示
-set statusline+=%m
-" 読み込み専用かどうか表示
-set statusline+=%r
-" ヘルプページなら[HELP]と表示
-set statusline+=%h
-" プレビューウインドウなら[Prevew]と表示
-set statusline+=%w
-" これ以降は右寄せ表示
-set statusline+=%=
-" file encoding
-set statusline+=[ENC=%{&fileencoding}]
-" 現在行数/全行数
-set statusline+=[LOW=%l/%L]
-" ステータスライン常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
-highlight statusline term=NONE cterm=NONE guifg=green ctermfg=green ctermbg=black
 
 set title
 set swapfile
