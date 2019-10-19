@@ -10,7 +10,8 @@ zstyle ':completion:*' list-colors "${LS_COLORS}"
 unsetopt list_types
 #prompt-----------------------------------------
 #http://www.sirochro.com/note/terminal-zsh-prompt-customize/
-setopt prompt_subst #表示毎にPROMPTで設定されている文字列を評価する
+#表示毎にPROMPTで設定されている文字列を評価する
+setopt prompt_subst
 autoload -Uz vcs_info
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
