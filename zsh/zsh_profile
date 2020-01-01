@@ -20,19 +20,13 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(pyenv init -)"
 alias brew="env PATH=${PATH/\/Users\/${USER}\/\.pyenv\/shims:/} brew"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-# anaconda virtual environment
-. ${HOME}/miniconda3/etc/profile.d/conda.sh
-conda activate base
-# added by Anaconda3 5.0.1 installer
-#
+
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
 
 eval "$(pyenv init -)"
-. /Users/tommy/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh
-conda activate
 # ##########################################
 
 # postgres ################################
@@ -46,12 +40,6 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$HOME/go/bin
 EOS
 # #########################################
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH=$PATH:$HOME/go/bin
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH=$PATH:$HOME/go/bin
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$HOME/go/bin

@@ -29,6 +29,8 @@ Plugin 'AndrewRadev/linediff.vim'
 Plugin 'tell-k/vim-autopep8'
 " ステータスバーをカッコよく
 Plugin 'itchyny/lightline.vim'
+" Golang拡張
+Plugin 'fatih/vim-go'
 " " よく使うコマンドをより素早く行うためのコマンドを多数持つプラグイン
 " Plugin 'tpope/vim-surround'
 call vundle#end()          " required by Vundle
