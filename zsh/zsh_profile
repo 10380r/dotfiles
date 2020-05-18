@@ -1,12 +1,7 @@
-if [ -f ~/.zshrc ] ; then
-. ~/.zshrc
-fi
-
 # Homebrew ################################
 # https://qiita.com/takuya0301/items/695f42f6904e979f0152
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 # ##########################################
-
 
 # Ruby #####################################
 # rbenv
@@ -43,3 +38,6 @@ EOS
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$HOME/go/bin
+
+# postgres
+export PATH=/usr/local/Cellar/postgresql/10.1/bin/:$PATH

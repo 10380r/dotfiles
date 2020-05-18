@@ -115,10 +115,9 @@ function peco-history-selection() {
 }
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
-export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-# anacondaの仮想環境系
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$PYENV_ROOT/versions/anaconda3-5.3.0/bin/:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="${GOPATH-"~/go"}/bin:$PATH"
+export PATH="${GOPATH-'~/go'}/bin:$PATH"

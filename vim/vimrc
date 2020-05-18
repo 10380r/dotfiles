@@ -167,3 +167,6 @@ let py_allow_hash_operator = 1
 " Linediffのコマンドショートカット作成
 command! -range Ld  call linediff#Linediff(<line1>, <line2>, {})
 command! -bang  Ldr call linediff#LinediffReset(<q-bang>, {})
+
+" 前のタブに移動する
+nnoremap gr :tabprevious
